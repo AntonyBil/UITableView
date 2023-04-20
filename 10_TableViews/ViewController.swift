@@ -20,7 +20,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.dataSource = self
+        tableView.delegate = self
     }
 
 
@@ -37,16 +39,20 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TableViewCell
         let title = rows[indexPath.section][indexPath.row]
-        cell.textLabel?.text = title
+        cell.cellLabel.text = title
+        cell.cellImageView.image = #imageLiteral(resourceName: "ricky")
         return cell
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return sections[section]
     }
-    
-    
-    
+}
+
+extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("You selected: \(rows[indexPath.section][indexPath.row])")
+    }
 }

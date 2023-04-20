@@ -19,6 +19,43 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="YT8-h4-b2D">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="112" id="1bk-3V-btf" customClass="TableViewCell" customModule="_0_TableViews" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.333332061767578" width="393" height="112"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1bk-3V-btf" id="nvS-7a-Rye">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="112"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RD3-dB-16Q">
+                                                    <rect key="frame" x="20" y="11" width="160" height="80"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="0lm-mX-FhH"/>
+                                                        <constraint firstAttribute="width" constant="160" id="jwq-We-AW6"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yve-HV-8KL">
+                                                    <rect key="frame" x="188" y="40.666666666666664" width="177" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="yve-HV-8KL" firstAttribute="centerY" secondItem="RD3-dB-16Q" secondAttribute="centerY" id="Uq4-gY-Utw"/>
+                                                <constraint firstItem="yve-HV-8KL" firstAttribute="leading" secondItem="RD3-dB-16Q" secondAttribute="trailing" constant="8" id="azb-Up-lI3"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="yve-HV-8KL" secondAttribute="trailing" constant="8" id="i99-0U-Zw5"/>
+                                                <constraint firstItem="RD3-dB-16Q" firstAttribute="leading" secondItem="nvS-7a-Rye" secondAttribute="leadingMargin" id="kvU-1K-NPm"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="RD3-dB-16Q" secondAttribute="bottom" constant="10" id="xAQ-MY-MW8"/>
+                                                <constraint firstItem="RD3-dB-16Q" firstAttribute="top" secondItem="nvS-7a-Rye" secondAttribute="topMargin" id="yr3-OJ-USu"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellImageView" destination="RD3-dB-16Q" id="72q-M2-f4p"/>
+                                            <outlet property="cellLabel" destination="yve-HV-8KL" id="EEr-sX-fXJ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
